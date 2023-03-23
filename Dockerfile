@@ -6,6 +6,7 @@ RUN mkdir $APP_PATH
 WORKDIR $APP_PATH
 ADD Gemfile $APP_PATH/Gemfile
 ADD Gemfile.lock $APP_PATH/Gemfile.lock
+ENV PATH $APP_PATH/bin:$PATH
 
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh

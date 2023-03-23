@@ -24,4 +24,7 @@ docker compose run --rm api bin/rails db:prepare
 
 * Deployment instructions
 
-* ...
+* GraphQL schema dump
+```shell
+docker compose run --rm api rake graphql:schema:idl
+```
